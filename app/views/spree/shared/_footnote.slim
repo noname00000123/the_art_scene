@@ -1,0 +1,56 @@
+#footnote.text-muted.text-center role='contentinfo'
+  p
+    a [
+      href='/legal/copyright/'
+      role='contentinfo']
+
+      |&copy;
+
+      span [
+        itemscope=''
+        itemprop='copyrightHolder'
+        itemref='schema-person'
+        itemtype='https://schema.org/Organisation']
+
+        span itemprop='name' == current_store.name
+
+      |&#32;
+
+      span itemprop='copyrightYear' == Time.zone.now.year
+
+    |&#32;|&#32;
+
+    |ABN:&#32 888 888 8888
+
+    |&#32;|&#32;
+
+    span
+      /== t('legal.footnote.author.phrase')
+
+      |Site by: &#32;
+
+      span [
+        itemscope=''
+        itemprop='author'
+        itemtype='https://schema.org/Person']
+
+        span itemprop='name' Daniel Small
+        /|#{@site_config.author.name.titleize}
+        |&#32;
+
+        / TODO Kramdown Template has a method to obfuscate mailto links, in the meantime this will do.
+        span.address
+          a href="mailto:piktur.io@gmail.com" pikur.io@gmail.com
+          /== obfuscate_email(@site_config['author']['email'])
+
+    / TODO until I have a presentable website
+    /a [
+      href="#{user_config.author.url}"
+      rel='external'
+      target='_blank']
+
+
+
+
+
+

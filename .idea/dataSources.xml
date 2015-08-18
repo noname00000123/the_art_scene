@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="2936950555">
+    <data-source source="LOCAL" name="Rails the_art_scene: development" uuid="f108f82d-0923-47c4-9ee2-9143b63b252b">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/theartscene_development</jdbc-url>
+      <user-name>theartscene</user-name>
+      <user-password>df96df8fdf97df8adfefdfe4dffcdff1df8ddfeedfe8dff5dffadfebdff9dff9dffddfe5dff8dfeedf8ddff7df8adf8fdf94</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails the_art_scene: test" uuid="26b4c651-03c7-4763-b0fb-220485944f01">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/theartscene_test</jdbc-url>
+      <user-name>theartscene</user-name>
+      <user-password>df96df8fdf97df8adfefdfe4dffcdff1df8ddfeedfe8dff5dffadfebdff9dff9dffddfe5dff8dfeedf8ddff7df8adf8fdf94</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails the_art_scene: production" uuid="b070dbae-4e0b-48e0-af1a-4ab3d387288e">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://&lt;%= ENV['DB_URL'] %&gt;/theartscene_production</jdbc-url>
+      <user-name>theartscene</user-name>
+      <user-password>df96df8fdf97df8adfefdfe4dffcdff1df8ddfeedfe8dff5dffadfebdff9dff9dffddfe5dff8dfeedf8ddff7df8adf8fdf94</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+
