@@ -1,12 +1,13 @@
 # Enhancing The Art Scene's online presence
 ## Why?
+
 Percentage above average
 Month where most are above average
 Walk in vs online revenue
 Metro vs regional
 
-
 > Bottom line is we can do better! *Here's how*.
+
 <table>
 <thead>
 <th><th>
@@ -206,6 +207,9 @@ After conversion the image weighs in at **~12.2kB**, and is **99.77% smaller** t
 
 Asset optimisation, HTML5 picture element allows modern image file formats such as webp 
 http://artscene.com.au/ 
+
+Client-side JavaScript applications are damn fast. In a traditional server-rendered application, every user interaction has to confer with a server far away in a data center about what to do. This can be fast under optimal scenarios, if you have a fast server in a fast data center connected to a user with a fast connection and a fast device. That’s a lot of “ifs” to be hanging the performance of your UI on.
+http://tomdale.net/2015/02/youre-missing-the-point-of-server-side-rendered-javascript-apps/
 
 <table>
 <thead>
