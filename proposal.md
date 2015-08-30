@@ -1,3 +1,4 @@
+# Enhancing The Art Scene's online presence
 ## Why?
 Percentage above average
 Month where most are above average
@@ -71,16 +72,11 @@ Metro vs regional
 <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1YA35gMk1gG6p1CEZsvmniSTxyl8o0zsFoDPKxz3B6ik/pubchart?oid=870024255&amp;format=interactive"></iframe>
 
 <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1YA35gMk1gG6p1CEZsvmniSTxyl8o0zsFoDPKxz3B6ik/pubchart?oid=1578557916&amp;format=interactive"></iframe>
+
 ## What?
 - independence
 - ownership
  
-## How?
-- opensource
-- 
-## When?
-
-
 ### Why Ruby
 Concerned about Ruby, you might have seen [this](http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html). In their own words,
 
@@ -104,6 +100,12 @@ A selection of companies actively developing with and contributing to Ruby and R
 - [Indiegogo](https://www.indiegogo.com/)
 - [Heroku](https://www.heroku.com/)
 - [Github](https://github.com/)
+
+## How?
+- opensource
+- 
+
+## When?
 
 
 ---
@@ -370,7 +372,7 @@ We've no small project here. Spree takes care of the foundation.  we're to make 
 The highest priority for [Australian Art Supplies](http://www.australianartsupplies.com.au/) redesign layout, optimise for search engines (SEO) 
 
 
-### First Phase 
+## First Phase 
 > Basic Spree implementation with enhanced data for priority inventory items.
 
 
@@ -442,9 +444,7 @@ Allow adequate time for;
 7. **Post-launch**
 ---
 
-
-
-### Phase Two
+## Phase Two
 > Support multiple domains and stores management
 
 > Target: **Mid January 2016**
@@ -478,7 +478,7 @@ Provision product grouping capabilities Promotional incentives for TAFE, School 
 
 ---
 
-### Phase Three
+## Phase Three
 
 
 ---
@@ -499,13 +499,11 @@ Provision product grouping capabilities Promotional incentives for TAFE, School 
 
 ---
 
-### Future Developments
+## Future Developments
 Further **strategic** deployments responding to data analysis and feedback
 
 
-
-
-### Far Future Prospects
+## Far Future Prospects
 - Schema linkup, making data consumable for Attache and/or Retail Express POS API
 
 
@@ -513,13 +511,11 @@ Further **strategic** deployments responding to data analysis and feedback
 
 # Documentation
 
-[TOC]
-
 ---
 
-# Establishing a containerised Development Environment with Docker
+## Establishing a containerised Development Environment with Docker
 
-## Docker?
+### Docker?
 
 Docker is a tool which allows developers to define containers for applications; this allows for control over the operating system and software running the application. If you’re running against an older version of Postgresql, a patched version of Ruby, or other dependencies which make setting up a development environment difficult, Docker may simplify development across a team. Even without complicated dependencies, forced encapsulation within a VM ensures development parity across a team and, if deploying with Docker to staging or production, across environments.
 -- [Source](https://robots.thoughtbot.com/rails-on-docker)
@@ -633,7 +629,7 @@ ENTRYPOINT /usr/bin/start-server
 
 ---
 
-# Install Postgres database
+## Install Postgres database
 
 ```
 $ sudo apt-get install postgresql postgresql-contrib libpq-dev
@@ -666,7 +662,7 @@ $ git commit -a -m "Prepare initial deploy to heroku"
 ```
 
 
-# Create an heroku instance
+## Create an heroku instance
 
 ```
 $ heroku login
@@ -725,7 +721,7 @@ $ rails s
 
 -----
 
-# Basic Spree Configuration
+## Basic Spree Configuration
 Heroku simplifies deployment significantly, we'll deploy to the heroku *cedar stack* during development. See [Deploying to Heroku](https://guides.spreecommerce.com/developer/heroku.html) for further information on heroku specific Spree configuration.
 
 ```ruby
@@ -734,7 +730,7 @@ Heroku simplifies deployment significantly, we'll deploy to the heroku *cedar st
 config.assets.initialize_on_precompile = false
 ```
 
-## Installing Spree & Extensions
+### Installing Spree & Extensions
 
 We're going to lock down to version **3-0-stable** and work with *cloned* local copies of Spree and relevant extensions. As per Rails convention, we'll store extensions within the host app **~/vendor/extensions** directory. We'll maintain test code and *dummy* apps for testing purposes here. 
 
@@ -784,7 +780,7 @@ $ bundle exec rake db:seed
 ```
 
 
-#### Authentication with Devise
+### Authentication with Devise
 
 Spree [Devise](https://github.com/plataformatec/devise) integration [spree_auth_devise](https://github.com/spree/spree_auth_devise)
 
@@ -799,7 +795,7 @@ $ bundle exec rake spree_auth:admin:create
 ```
 
 
-#### Managing Translations
+### Managing Translations
 [Rails Internationalization (I18n) API](http://guides.rubyonrails.org/i18n.html)
 
 ```
@@ -807,7 +803,7 @@ $ bundle exec rails g spree_i18n:install
 ```
 
 
-#### Managing Payment Options
+### Managing Payment Options
 
 ```
 $ bundle exec rails g spree_gateway:install
@@ -815,7 +811,7 @@ $ bundle exec rails g spree_gateway:install
 ```
 
 
-#### Managing Multiple Store Fronts
+### Managing Multiple Store Fronts
 
 ```
 # Domains
@@ -832,7 +828,7 @@ $ bundle exec rake price_books:currency_rates
 ```
 
 
-#### Managing Volume Pricing
+### Managing Volume Pricing
 
 ```
 $ bundle exec rails g spree_volume_pricing:install
@@ -840,14 +836,14 @@ $ bundle exec rails g spree_volume_pricing:install
 ```
 
 
-#### Managing Transactional and Marketing Mail
+### Managing Transactional and Marketing Mail
 
 ```
 $ bundle exec rails g spree_chimpy:install
 ```
 
 
-#### Working with Sample data
+### Working with Sample data
 
 ```
 $ bundle exec rake spree_sample:load
@@ -856,7 +852,7 @@ $ bundle exec rake spree_sample:load
 ---
 
 
-# Testing with RSpec
+## Testing with RSpec
 Having a good test suite will allow us to refactor our code with confidence, changing its form without changing its function. **rspec-rails** extends **RSpec** and **Ruby on Rails** so it is possible to specify the behaviour of our rails web-app.
 
 Ensure the following in **~/Gemfile**
@@ -877,7 +873,7 @@ Run tests with```$ bundle exec rake```
 
 ---
 
-# Initial Deploy
+## Initial Deploy
 
 > Further advice on Spree deployment [here](https://guides.spreecommerce.com/developer/manual-ubuntu.html)
 
@@ -927,7 +923,7 @@ $ heroku open
 
 > Note to push an alternate branch to heroku use ```$ git push -f heroku [alternate_branch]:master```
 
-# Continuous Integration
+## Continuous Integration
 
 Continuous Integration (CI) is a software development practice where members of a team integrate their work as frequently as possible to reduce integration problems and code conflicts. Every push to a source code repository is verified by an automated build and a test suite to detect errors as quickly as possible. A good CI tool also has a good notification system which effectively notifies all the team members about conflicts and issues with their code.
 
@@ -935,16 +931,16 @@ Writing software is error prone and riddled with problems. This is often amplifi
 
 -- [Source](https://infinum.co/the-capsized-eight/articles/a-ruby-on-rails-continous-integration-process-using-semaphore-github-codeclimate-and-hipchat)
 
-## Requirements
+### Requirements
 - Must be hosted
 - Free
 - Fast
 - Compatible with BitBucket repos
 
-## Semaphore
+### Semaphore
 https://semaphoreci.com/blog/2014/10/14/continuous-integration-bitbucket.html
 
-## Wercker
+### Wercker
 
 ---
 
